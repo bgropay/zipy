@@ -55,6 +55,7 @@ while True:
 print("-"*39)
 try:
         for kata_sandi in daftar_kata_sandi:
+                time.sleep(0.5)
                 try:
                         print(f"[*] Mencoba kata sandi: {kata_sandi}")
                         with pyzipper.AESZipFile(file_zip) as fz:
@@ -67,7 +68,7 @@ try:
                                         exit()
                 except Exception:
                         continue
-        print("[-] Kata sandi tidak ditemukan. Coba gunakan wordlist yang lain.")
+        print("[-] Kata sandi tidak ditemukan.")
 except KeyboardInterrupt:
         print("[*] Keluar dari program...")
         time.sleep(3)
